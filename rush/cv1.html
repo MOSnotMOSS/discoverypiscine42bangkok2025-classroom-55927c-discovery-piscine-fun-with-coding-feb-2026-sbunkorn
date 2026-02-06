@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CV 1 - Academic</title>
+    <title>Academic Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap -->
@@ -10,78 +10,179 @@
 
     <style>
         body {
+            scroll-behavior: smooth;
             background-color: #f8f9fa;
         }
-        .cv-header {
-            background: #0d6efd;
-            color: white;
-            padding: 40px 0;
+
+        section {
+            padding: 100px 0;
+        }
+
+        .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: white;
+
+        background:
+            linear-gradient(
+                rgba(13, 110, 253, 0.6),
+                rgba(13, 110, 253, 0.6)
+            ),
+            url("it.jpeg");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* 🔥 Parallax */
+        }
+
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 70%;
+            object-fit: cover;
+            border: 5px solid white;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
         }
     </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="cv-header text-center">
-    <h1>Your Name</h1>
-    <p>Student | Academic Profile</p>
-</header>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">Home</a>
 
-<!-- CONTENT -->
-<div class="container my-5">
+        <!-- Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!-- PROFILE -->
-    <section class="mb-4">
-        <h3>Profile</h3>
-        <p>
-            Motivated student with strong interest in computer science, web development,
-            and problem-solving. Actively learning modern technologies and applying them
-            in academic projects.
-        </p>
-    </section>
+        <!-- Menu -->
+        <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#profile">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-    <!-- EDUCATION -->
-    <section class="mb-4">
-        <h3>Education</h3>
-        <ul>
-            <li><strong>Bachelor Degree</strong> – Your University (20XX – Present)</li>
-            <li>Relevant Courses: Web Development, Databases, Programming</li>
-        </ul>
-    </section>
 
-    <!-- SKILLS -->
-    <section class="mb-4">
-        <h3>Skills</h3>
-        <div class="row">
-            <div class="col-md-6">
-                <ul>
-                    <li>HTML, CSS, Bootstrap</li>
-                    <li>JavaScript</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <ul>
-                    <li>Python</li>
-                    <li>Django (basic)</li>
-                </ul>
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <img src="pro1.jpg" class="profile-img mb-4" alt="Profile">
+        <h1 class="display-4 fw-bold">สพณทร บุญกรไกรฤกษ์</h1>
+        <p class="lead">Portfolio</p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+        <div class="card shadow p-4">
+            <h2>About Me</h2>
+            <p class="mt-3">
+                Motivated student with strong interest in computer science, web development,
+                and problem-solving. Passionate about learning new technologies and applying
+                them to real projects.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="bg-light">
+    <div class="container">
+        <div class="card shadow p-4">
+            <h2>Education</h2>
+            <ul class="mt-3">
+                <li><strong>Bachelor Degree</strong> – Your University (20XX – Present)</li>
+                <li>Relevant Courses: Web Development, Databases, Programming</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="container">
+        <div class="card shadow p-4">
+            <h2>Skills</h2>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <ul>
+                        <li>HTML, CSS, Bootstrap</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li>Python</li>
+                        <li>Django (Basic)</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- PROJECTS -->
-    <section class="mb-4">
-        <h3>Academic Projects</h3>
-        <ul>
-            <li>Personal Portfolio Website</li>
-            <li>Web Application with Authentication</li>
-            <li>Database-driven Project</li>
-        </ul>
-    </section>
+<!-- PROJECTS -->
+<section id="projects" class="bg-light">
+    <div class="container">
+        <div class="card shadow p-4">
+            <h2>Academic Projects</h2>
+            <ul class="mt-3">
+                <li>Personal Portfolio Website</li>
+                <li>Web Application with Authentication</li>
+                <li>Database-driven Project</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-    <!-- BACK BUTTON -->
-    <a href="index.html" class="btn btn-primary">⬅ Back to Portfolio</a>
+<!-- CONTACT -->
+<section id="contact">
+    <div class="container">
+        <div class="card shadow p-4 text-center">
+            <h2>Contact</h2>
+            <p class="mt-3">Email: your@email.com</p>
+            <p>GitHub: github.com/yourname</p>
+            <p>LinkedIn: linkedin.com/in/yourname</p>
+            <a href="index.html" class="btn btn-primary mt-3">⬅ Back to Home</a>
+        </div>
+    </div>
+</section>
 
-</div>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
